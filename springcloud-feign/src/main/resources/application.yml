@@ -16,3 +16,8 @@ eureka:
     lease-expiration-duration-in-seconds: 10
     #eureka客户端需要向eureka服务器发送心跳的频率 默认30s （开发环境)
     lease-renewal-interval-in-seconds: 1
+#修改application添加属性
+#开启hystrix指标
+feign:
+  hystrix:
+    enabled: true

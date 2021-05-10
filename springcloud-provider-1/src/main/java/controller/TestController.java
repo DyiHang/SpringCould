@@ -22,7 +22,8 @@ public class TestController {
 
         @RequestMapping("/test")
     public String test() {
-        return appName+"上线测试:"+name+":"+port;
+            int a=1/0;// 除数不能为0
+            return appName+"上线测试:"+name+":"+port;
     }
     // 测试带普通参数
     @RequestMapping("/testByParam")

@@ -1,5 +1,6 @@
 package feign;
 
+import controller.TestFeignFallback;
 import org.apache.catalina.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
-@FeignClient(value = "springcloud-provider-1")
+@FeignClient(value = "springcloud-provider-1",fallback = TestFeignFallback.class)
 public interface TestFeign {
     @RequestMapping(value = "/test")
     String testByFeign();
